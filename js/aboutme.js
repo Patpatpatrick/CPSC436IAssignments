@@ -1,7 +1,6 @@
 var currIndex = 0;
 
 window.onload = function () {
-
     showSlides(currIndex);
 
     var prev = document.getElementById("plusSlidesMinus1");

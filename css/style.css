@@ -1,4 +1,6 @@
-/* Add a black background color to the top navigation */
+body{
+	background-color: blanchedalmond
+}
 p {
 	display: block;
 	text-align: left;
@@ -7,9 +9,9 @@ p {
 	margin-left: 300px;
 	margin-right: 300px;
   }
-
-  * {box-sizing:border-box}
-
+	p:hover { 
+		font-weight: bold;
+	}
   /* Slideshow container */
   .slideshow-container {
 	max-width: 1000px;
@@ -104,8 +106,9 @@ p {
   }
 
 .topnav {
-  background-color: #333;
-  overflow: hidden;
+	background-color: #333;
+	overflow: hidden;
+	width: 100%;
 }
 /* Style the links inside the navigation bar */
 .topnav a {
@@ -125,6 +128,129 @@ p {
   
 /* Add a color to the active/current link */
 .topnav a.active {
-    background-color: #4CAF50;
+    background-color: gold;
     color: white;
+}
+
+#go-top {
+	width:40px;height:36px;
+	background-color:#777;
+	position:relative;
+	border-radius:2px;
+	position:fixed;right:5px;bottom:25px;
+	cursor:pointer;display:none;
+ }
+ #go-top:after {
+	content:" ";
+	position:absolute;left:13px;top:12px;
+	border-top:4px solid #fff;border-right:4px solid #fff;
+	width:12px;height:12px;
+	transform:rotate(-45deg);
+ }
+ #go-top:hover {
+	background-color:#333;
+ }
+
+#go-top {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: green; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#go-top:hover {
+  background-color: salmon; /* Add a dark-grey background on hover */
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */  
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+button[type=submit]{
+	width: 4cm;
+  background-color: tan;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button[type=reset],button[type=del] {
+	width: 4cm;
+	text-align: center;
+	background-color: rgb(165, 81, 42);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* When moving the mouse over the submit button, add a darker green color */
+button[type=submit]:hover,button[type=reset]:hover,button[type=del]:hover {
+  background-color: gray;
+}
+
+
+/* Add a background color and some padding around the form */
+.container {
+	width: 380px;
+	height : 550px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+	padding: 20px;
+	margin-bottom: 0%;
+}
+.messages {
+	width: 800px;
+	height : 500px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+	padding: 20px;
+	margin-bottom: 0%;
+	display:block;
+	overflow-y:auto;
+}      
+
+#messagetable {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	
+}
+#messagetable tbody{
+	overflow-y: scroll;
+}
+#messagetable td, #messagetable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#messagetable tr:nth-child(even){background-color: papayawhip;}
+
+#messagetable tr:hover {background-color: #ddd;}
+
+#messagetable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: tan;
+  color: white;
 }

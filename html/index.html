@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>MessageList</title>
+		<script type="text/javascript" src="../js/assignment1.js"></script>
+		<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+		<div class="topnav">
+			<a class="active" href="#home">Home</a>
+			<a href="#news">News</a>
+			<a href="#contact">Contact</a>
+			<a href="about.html">About</a>
+		</div>
+		<button id="go-top"></button>
+		<table id = "content" style="width: 100%; height: 650px;">
+			<tr>
+				<td style="vertical-align: 0%">
+					<br>
+					<div class="messages">							
+						<table id = "messagetable" style="word-wrap:break-word; word-break:break-all;">
+							<tr id = "messagetableHeader">
+								<th style="width: 50px;">From</th>
+								<th style="width: 50px;">To</th>
+								<th style="width: 50px;">Category</th>
+								<th>Content</th>
+								<th style="width: 20px;">Operation</th>
+							</tr>
+							<tr>
+								<td>a</td>
+								<td>b</td>
+								<td>A</td>
+								<td>blahblahblahblahblahblahblahblah</td>
+								<td><button type="del" name="Clear">Clear</button></td>
+							</tr>
+							<tr>
+								<td>a</td>
+								<td>a</td>
+								<td>B</td>
+								<td>blahblahblahblahblahblahblahblahblahbahblahblahblahblahbahblahblahblahblahbahblahblahblahblahbahblahblahblahblahbahblahblahblahblahbahblahblahblahblahbahblahblahblahblahbahblahblahblahblahbahblahblahblahblahblahblahblah</td>
+								<td ><button type="del" name="Clear">Clear</button></td>
+							</tr>
+							<tr>
+								<td>c</td>
+								<td>a</td>
+								<td>C</td>
+								<td>@#@#$&@*$^*@^*&!)@*(!)*@blahblablahblahblah</td>
+								<td ><button type="del" name="Clear">Clear</button></td>
+							</tr>
+							<tr>
+								<td>d</td>
+								<td>a</td>
+								<td>B</td>
+								<td>blahblahblahblahblahblahbahblahblahblahblahblah</td>
+								<td ><button type="del" name="Clear">Clear</button></td>
+							</tr>
+						</table>
+					</div>
+					<br>
+					<center>
+						<button type="del" id="ClearAll">ClearAll</button>
+					</center>
+				</td>
+				<td style="vertical-align: 0%">
+					<br>
+					<div class="container" >
+						<form action="" method="POST" class="form" id = "inputform">
+							<label for="fname">From</label>
+							<input type="text" id="fname" name="fromname" placeholder="Your name..">
+						
+							<label for="lname">To</label>
+							<input type="text" id="tname" name="toname" placeholder="Receiver's name..">
+						
+							<label for="Category">Category</label>
+							<select id="category" name="category">
+								<option value="A">A</option>
+								<option value="B">B</option>
+								<option value="C">C</option>
+							</select>
+			
+							<label for="subject">Content</label>
+							<textarea id="subject" name="textcontent" placeholder="Write something.." style="height:200px"></textarea>
+							<center>
+								<button type="submit" value="Submit" id = "submitBtn">Submit</button>
+								<button type="reset" value="Reset">Reset</button>
+							</center>
+						</form>
+						
+					</div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
