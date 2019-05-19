@@ -62,27 +62,30 @@ window.onload = function(){
         }
     }
 	  
-    function getDataRow(h){
+    function getDataRow(json){
         var row = document.createElement('tr'); 
         
         var fromnameCell = document.createElement('td'); 
-        fromnameCell.innerHTML = h.fromname; 
+        fromnameCell.innerHTML = json.fromname; 
         row.appendChild(fromnameCell);
         var tonameCell = document.createElement('td');
-        tonameCell.innerHTML = h.toname;
+        tonameCell.innerHTML = json.toname;
         row.appendChild(tonameCell);
         
         var categoryCell = document.createElement('td');
-        categoryCell.innerHTML = h.category;
+        categoryCell.innerHTML = json.category;
         row.appendChild(categoryCell);
 
         var text = document.createElement('td');
-        text.innerHTML = h.textcontent;
+        text.innerHTML = json.textcontent;
         row.appendChild(text);
+
+        var time = document.createElement('td');
+        time.innerHTML = json.time;
+        row.appendChild(time);
         
         var delCell = document.createElement('td');
         delCell.innerHTML = '<button type="reset" name="Clear">Clear</button>';
-        
         row.appendChild(delCell);
         
         return row; 
@@ -100,6 +103,11 @@ window.onload = function(){
                 obj[name] = value;
             }
         }
+        var today = new Date();
+        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        var time = today.getHours() + ":" + today.getMinutes();
+        var dateTime = date+' '+time;
+        obj['time'] = dateTime;
         console.log(JSON.stringify(obj));
         return JSON.stringify(obj);
     }
