@@ -40,7 +40,7 @@ How my implementation is in compliance with the assignment requirements
     Yes.
 
 8. Cool thing that I introduce:
-    i.Clear a particular message
-    ii.Drop box that represent message type
-    iii.Can automatically add time wrt a message
-    iv.A slider in About Me page.
+i.Clear a particular message
+ii.Drop box that represent message type
+iii.Can automatically add time wrt a message
+iv.A slider in About Me page.
