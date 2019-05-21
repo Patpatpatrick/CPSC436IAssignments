@@ -1,4 +1,12 @@
 window.onload = function(){
+    // mydiv_resize();
+    // var content=document.getElementById("content");
+    // var mydiv_resize=function(){
+    //     content.style.width=document.body.clientWidth;
+    //     content.style.height=document.body.clientHeight;
+    // }
+    // window.onresize = mydiv_resize;
+    
     // window.onscroll = function() {scrollFunction()};
     // var gotop = document.getElementById("go-top");
     // gotop.onclick = function(){topFunction()};
@@ -13,6 +21,8 @@ window.onload = function(){
     //     document.body.scrollTop = 0;
     //     document.documentElement.scrollTop = 0;
     // }
+
+
 
     delBtns = document.getElementsByName('Clear');
     console.log(delBtns.length);

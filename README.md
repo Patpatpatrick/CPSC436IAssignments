@@ -14,10 +14,10 @@ Assignment 1 is consist of two pages:
 How my implementation is in compliance with the assignment requirements
 
 1. An HTML file that loads a CSS file and a JS file
-    [a relative link](/html/index.html) links [a relative link](/js/assignment1.js) and [a relative link](/css/style.css)
+    [index.html](/html/index.html) links [assignment1.js](/js/assignment1.js) and [style.css](/css/style.css)
 
 2. A navbar (should have functioning links to at least a home page (the main page where your message list is), and an about page (brief information about yourself, the project, etc.))
-    Yes, there is a navbar on top of [a relative link](/html/index.html).
+    Yes, there is a navbar on top of [index.html](/html/index.html).
 
 3. A form with some kind of text input or textarea, to write out a message, as well as a button to add the message to a list, and a button to clear the form
     Yes, there is a div to the right of the index page, in the div there is a form where you can submit messages.
