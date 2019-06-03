@@ -12,7 +12,7 @@ class ClearOne extends React.Component {
     }
 	render() {
         return (
-            <button type="del" onClick = {this.handleClick} id="Clear">Clear</button>
+            <button type="del" onClick = {this.handleClick} id={this.props.index + 'Clear'}>Clear</button>
         );
     }
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import './style.css'
-import ClearOne from './ClearOne.js';
+import ClearOne from './ClearOne';
+import SeeOne from './ViewOneMessage';
 import { connect } from 'react-redux';
-
 
 class MessageBox extends React.Component { 
  
@@ -21,13 +21,13 @@ class MessageBox extends React.Component {
                         </tr>
                         {this.props.messageArray.map( (message, idx) => {
                             return (
-                                <tr id = {idx}>
+                                <tr id = {'messageIndex' + idx}>
                                     <td>{message.fromname}</td>
                                     <td>{message.toname}</td>
                                     <td>{message.category}</td>
                                     <td>{message.textcontent}</td>
                                     <td>{message.date.toString()}</td>
-                                    <td><ClearOne index = {idx}/></td>
+                                    <td><ClearOne index = {idx}/><SeeOne index = {idx}/></td>
                                 </tr>
                             )
                             })

@@ -9,6 +9,8 @@ const defaultState = {
 		textcontent : '',
 		date : new Date().toLocaleString()
 	},
+	popUp: false,
+	popUpMessageIndex : 0,
 	messageArray : [{
 		fromname: 'LGY',
 		toname: 'YGL',
@@ -26,6 +28,8 @@ const messageReducer = (state = defaultState, action) => {
 			return {
 				count : state.count + 1,
 				unsubmittedMessage : state.unsubmittedMessage,
+				popUp:  state.popUp,
+				popUpMessageIndex : state.popUpMessageIndex,
 				messageArray: [...state.messageArray,state.unsubmittedMessage]
 			};
 		case actions.CLEAR_ALL:
@@ -33,13 +37,34 @@ const messageReducer = (state = defaultState, action) => {
 			return {
 				count : 0,
 				unsubmittedMessage : state.unsubmittedMessage,
+				popUp:  state.popUp,
+				popUpMessageIndex : state.popUpMessageIndex,
 				messageArray: []
 			};
 		case actions.CLEAR_ONE:
 			return	{
 				count : state.count - 1,
 				unsubmittedMessage : state.unsubmittedMessage,
+				popUp: state.popUp,
+				popUpMessageIndex : state.popUpMessageIndex,
 				messageArray: [...state.messageArray.slice(0,action.toDelIndex).concat(state.messageArray.slice(action.toDelIndex+1))]
+			};
+		case actions.VIEW_ONE:
+			console.log('wwww'+action.toViewIndex);
+			return	{
+				count : state.count,
+				unsubmittedMessage : state.unsubmittedMessage,
+				popUp : true,
+				popUpMessageIndex : action.toViewIndex,
+				messageArray: state.messageArray
+			};
+		case actions.UNVIEW_ONE:
+			return	{
+				count : state.count,
+				unsubmittedMessage : state.unsubmittedMessage,
+				popUp : false,
+				popUpMessageIndex : 0,
+				messageArray: state.messageArray
 			};
 		case actions.CHANGE_INPUT :
 			var newMessage = Object.assign({}, state.unsubmittedMessage, 
@@ -52,6 +77,8 @@ const messageReducer = (state = defaultState, action) => {
 			return {
 				count : state.count,
 				unsubmittedMessage : newMessage,
+				popUp : state.popUp,
+				popUpMessageIndex : state.popUpMessageIndex,
 				messageArray: state.messageArray
 			};
 		default:

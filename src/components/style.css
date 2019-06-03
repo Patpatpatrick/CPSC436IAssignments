@@ -105,6 +105,26 @@ p {
 	to {opacity: 1}
   }
 
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0,0,0, 0.5);
+}
+.popup_inner {
+  position: fixed;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+  margin: auto;
+  background: white;
+}
 .topnav {
 	background-color: #333;
 	overflow: hidden;
@@ -184,7 +204,7 @@ input[type=text], select, textarea {
 }
 
 /* Style the submit button with a specific background color etc */
-button[type=submit]{
+button[type=submit],button[type=view]{
 	width: 4cm;
   background-color: tan;
   color: white;
@@ -193,7 +213,7 @@ button[type=submit]{
   border-radius: 4px;
   cursor: pointer;
 }
-button[type=reset],button[type=del] {
+button[type=reset],button[type=del],button[type=close] {
 	width: 4cm;
 	text-align: center;
 	background-color: rgb(165, 81, 42);
@@ -204,7 +224,7 @@ button[type=reset],button[type=del] {
   cursor: pointer;
 }
 /* When moving the mouse over the submit button, add a darker green color */
-button[type=submit]:hover,button[type=reset]:hover,button[type=del]:hover {
+button[type=submit]:hover,button[type=reset]:hover,button[type=del]:hover,button[type=view]:hover,button[type=close]:hover {
   background-color: gray;
 }
 
