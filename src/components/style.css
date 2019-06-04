@@ -117,7 +117,7 @@ p {
   background-color: rgba(0,0,0, 0.5);
 }
 .popup_inner {
-  position: fixed;
+  position: absolute;
   left: 25%;
   right: 25%;
   top: 25%;
