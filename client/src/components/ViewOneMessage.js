@@ -34,10 +34,6 @@ class SeeOne extends React.Component {
                     
                 </div>
             </BrowserRouter>
-            // <div>
-            //     <button type="view" onClick = {this.handleClick} id={this.props.index + 'View'}>Edit</button>
-            //     {this.props.toPop && <Popup />}
-            // </div>   
         );
     }
 }
