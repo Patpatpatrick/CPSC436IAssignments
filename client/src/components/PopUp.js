@@ -1,7 +1,6 @@
 import React from 'react';
 import './style.css'
 import { connect } from 'react-redux';
-import { closePopedMessage } from '../actions/popUpActions';
 import { uploadData } from '../actions/postActions';
 import { changePopedMessage } from '../actions/fetchActions';
 
@@ -66,9 +65,6 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
     return {
-      closePopedMessage: () => {
-        dispatch(closePopedMessage());
-      },
       updataMessage: (url,data,method) => {
         dispatch(uploadData(url,data,method));
       },

@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchSingleItem }  from '../actions/fetchActions';
-import { firePopUP } from '../actions/popUpActions';
 import './style.css'
 import Popup from './PopUp'
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
@@ -11,13 +10,11 @@ class SeeOne extends React.Component {
         this.handleClick = this.handleClick.bind(this);
     }
     handleClick(){
-        console.log(this.props.index);
-        this.props.firePopUP();
         this.props.showIndexMessage('http://localhost:3001/getMessages/' + this.props.index);
     }
 	render() {
         return (
-            <BrowserRouter> {/* browserRouter is a router component Generally speaking, you should use a <BrowserRouter> if you have a server that responds to requests and a <HashRouter> if you are using a static file server.*/}
+            <BrowserRouter>
                 <div>
                     <button type="view">
                         <Link
@@ -42,9 +39,6 @@ const mapDispatchToProps = (dispatch) => {
     return {
       showIndexMessage: (url) => {
         dispatch(fetchSingleItem(url));
-      },
-      firePopUP : () => {
-          dispatch(firePopUP());
       }
     }
 };
