@@ -14,7 +14,7 @@ class Popup extends React.Component {
     }
     uploadChange (event) {
       event.preventDefault();
-      this.props.updataMessage('http://localhost:3001/changeMessage/' + this.props.idx, this.props.message,'PUT');
+      this.props.updataMessage('http://localhost:3001/changeMessage/' + this.props._id, this.props.message,'PUT');
     }
     handleChange (event) {
         const target = event.target;

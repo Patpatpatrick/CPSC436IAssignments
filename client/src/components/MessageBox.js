@@ -34,15 +34,15 @@ class MessageBox extends React.Component {
                             <th style={{width: '190px'}} >Added Date</th>
                             <th style={{width: '20px'}}>Operation</th>
                         </tr>
-                        {this.props.messageArray.map( (message, idx) => {
+                        {this.props.messageArray.map( (message) => {
                             return (
-                                <tr id = {'messageIndex' + idx} key = {'messageIndex' + idx}>
+                                <tr id = {message._id} key = {message._id}>
                                     <td>{message.fromname}</td>
                                     <td>{message.toname}</td>
                                     <td>{message.category}</td>
                                     <td>{message.textcontent}</td>
                                     <td>{message.date.toString()}</td>
-                                    <td><ClearOne index = {idx}/><SeeOne index = {idx}/></td>
+                                    <td><ClearOne index = {message._id}/><SeeOne index = {message._id}/></td>
                                 </tr>
                             )
                             })

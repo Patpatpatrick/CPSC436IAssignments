@@ -16,6 +16,7 @@ const fetchReducers = (state = defaultState, action) => {
 				}
 			);
 		case fetchActions.FETCH_DATA_SUCCESS:
+			console.log(action.items);
 			return Object.assign({}, state, 
 				{ 
 					messageArray: action.items,

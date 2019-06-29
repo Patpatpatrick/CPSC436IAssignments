@@ -24,7 +24,7 @@ class SeeOne extends React.Component {
                         >Edit</Link>
                         <Switch>
                             <Route path="/popup" 
-                            render={(props) => <Popup {...props} idx={this.props.index} />}
+                            render={(props) => <Popup {...props} _id={this.props.index} />}
                             />
                         </Switch> 
                     </button>

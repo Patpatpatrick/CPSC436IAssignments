@@ -8,6 +8,8 @@ class ClearOne extends React.Component {
         this.handleClick = this.handleClick.bind(this);
     }
     handleClick(){
+        console.log('deleteOne fired');
+        console.log(this.props.index);
         this.props.cOne('http://localhost:3001/del/'+this.props.index);
     }
 	render() {
