@@ -20,8 +20,8 @@ class ClearOne extends React.Component {
 }
 const mapDispatchToProps = (dispatch) => {
     return {
-      cOne: (index) => {
-        dispatch(delData(index));
+      cOne: (url) => {
+        dispatch(delData(url));
       }
     }
 };

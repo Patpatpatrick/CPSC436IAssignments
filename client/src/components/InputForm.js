@@ -20,9 +20,11 @@ class InputForm extends React.Component {
     handleSubmit (event) {
         event.preventDefault();
         const data = this.state;
+        console.log(data);
         this.props.postMessage('http://localhost:3001/addMessage',data,'POST');
     }
     handleChange (event) {
+        console.log(event.target.name);
         this.setState({ [event.target.name]: event.target.value });
     }
 	render() {
