@@ -1,6 +1,6 @@
 {
-  "name": "heroku-cra-node",
-  "version": "3.0.0",
+  "name": "lgymessageapp",
+  "version": "1.0.0",
   "description": "How to use create-react-app with a custom Node API on Heroku",
   "engines": {
     "node": "10.x"
@@ -10,7 +10,7 @@
     "build": "cd client/ && npm install && npm run build"
   },
   "cacheDirectories": [
-    "backend/node_modules",
+    "node_modules",
     "client/node_modules"
   ],
   "dependencies": {
@@ -20,8 +20,17 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
+    "mongodb": "^3.2.7",
     "morgan": "~1.9.1",
-    "mongodb": "^3.2.7"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-modal": "^3.8.1",
+    "react-redux": "^7.0.3",
+    "react-responsive-modal": "^4.0.1",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "keywords": [
     "node",
