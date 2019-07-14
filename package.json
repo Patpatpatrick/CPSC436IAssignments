@@ -6,11 +6,9 @@
     "node": "10.x"
   },
   "scripts": {
-    "start": "node backend",
-    "build": "cd client/ && npm start"
+    "start": "node backend"
   },
   "cacheDirectories": [
-    "node_modules",
     "backend/node_modules",
     "client/node_modules"
   ],
