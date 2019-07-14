@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Deployed app based on assignment4",
   "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Patpatpatrick/CPSC436IAssignments.git"
@@ -14,8 +17,8 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
-    "mongodb": "^3.2.7",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "mongodb": "^3.2.7"
   },
   "author": "Guoyang Luan",
   "license": "MIT",
@@ -25,9 +28,5 @@
   "engines": {
     "node": "10.x"
   },
-  "homepage": "https://github.com/Patpatpatrick/CPSC436IAssignments#readme",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": []
+  "homepage": "https://github.com/Patpatpatrick/CPSC436IAssignments#readme"
 }
