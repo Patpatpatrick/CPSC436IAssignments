@@ -6,7 +6,8 @@
     "node": "10.x"
   },
   "scripts": {
-    "start": "node backend"
+    "start": "node backend",
+    "build": "cd client/ && npm install && npm run build"
   },
   "cacheDirectories": [
     "backend/node_modules",
