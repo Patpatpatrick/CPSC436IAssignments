@@ -1,18 +1,16 @@
 {
-  "name": "lgymessageapp",
+  "name": "onepagemessageboxapp",
   "version": "1.0.0",
-  "description": "How to use create-react-app with a custom Node API on Heroku",
-  "engines": {
-    "node": "10.x"
-  },
+  "description": "Deployed app based on assignment4",
+  "main": "index.js",
   "scripts": {
-    "start": "node backend",
-    "build": "cd client/ && npm install && npm run build"
+    "start": "node ./bin/www",
+    "build": "cd client/ && npm run"
   },
-  "cacheDirectories": [
-    "backend/node_modules",
-    "client/node_modules"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Patpatpatrick/CPSC436IAssignments.git"
+  },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
@@ -23,16 +21,13 @@
     "morgan": "~1.9.1",
     "mongodb": "^3.2.7"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mars/heroku-cra-node.git"
-  },
-  "keywords": [
-    "node",
-    "heroku",
-    "create-react-app",
-    "react"
-  ],
+  "author": "Guoyang Luan",
   "license": "MIT",
-  "devDependencies": {}
+  "bugs": {
+    "url": "https://github.com/Patpatpatrick/CPSC436IAssignments/issues"
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "homepage": "https://github.com/Patpatpatrick/CPSC436IAssignments#readme"
 }
