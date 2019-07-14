@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git+https://github.com/Patpatpatrick/CPSC436IAssignments.git"
   },
+  "scripts": {
+    "start": "node .backend/bin/www"
+  },
   "author": "Guoyang Luan",
   "license": "MIT",
   "bugs": {
