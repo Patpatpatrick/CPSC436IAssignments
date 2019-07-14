@@ -7,9 +7,6 @@
     "type": "git",
     "url": "git+https://github.com/Patpatpatrick/CPSC436IAssignments.git"
   },
-  "scripts": {
-    "start": "node .backend/bin/www"
-  },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
@@ -23,6 +20,9 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Patpatpatrick/CPSC436IAssignments/issues"
+  },
+  "engines": {
+    "node": "10.x"
   },
   "homepage": "https://github.com/Patpatpatrick/CPSC436IAssignments#readme"
 }
