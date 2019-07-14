@@ -1,8 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var mongo = require('mongodb').MongoClient;
+
 var url = "mongodb+srv://cpsc436assignment_guoyang:lgy7080110107@cluster0-cfi2k.mongodb.net/assignment4?retryWrites=true&w=majority";
 var db;
+
 mongo.connect(url,{ useNewUrlParser: true }, (err, client) => {
   if (err) {
     console.error(err)
@@ -25,7 +27,7 @@ router.post('/addMessage',(req,res)=>{
 
 router.get('/getMessages',(req,res)=>{
     db.collection('messages').find().toArray((error,result) => {
-    res.json(result);
+        res.json(result);
         // client.close();
     });
 });
@@ -51,7 +53,6 @@ router.get('/getMessages/:index',(req,res)=>{
 });
 
 router.delete('/del/:index',(req,res) => {
-
     const index = req.params.index;
     db.collection('messages').findOneAndDelete({_id:ObjectId(index)})
       .then(deletedDocument => {
