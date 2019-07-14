@@ -7,10 +7,11 @@
   },
   "scripts": {
     "start": "node backend",
-    "build": "cd client/ && npm install && npm run build"
+    "build": "cd client/ && npm start"
   },
   "cacheDirectories": [
     "node_modules",
+    "backend/node_modules",
     "client/node_modules"
   ],
   "dependencies": {
@@ -20,17 +21,12 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
-    "mongodb": "^3.2.7",
     "morgan": "~1.9.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-modal": "^3.8.1",
-    "react-redux": "^7.0.3",
-    "react-responsive-modal": "^4.0.1",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
-    "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0"
+    "mongodb": "^3.2.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mars/heroku-cra-node.git"
   },
   "keywords": [
     "node",
