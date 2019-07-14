@@ -7,7 +7,7 @@
   },
   "scripts": {
     "start": "node backend",
-    "build": "cd react-ui/ && npm install && npm run build"
+    "build": "cd client/ && npm install && npm run build"
   },
   "cacheDirectories": [
     "backend/node_modules",
